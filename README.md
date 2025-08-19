@@ -47,7 +47,7 @@ __Step 2__: Observe ICMP (Ping)
 *See ping traffic in **Wireshark** and how an **NSG** rule changes it.*
 
 1. **RDP** into the Windows 10 VM, install and open **Wireshark**.
-2. Set the display filter to **ICMP**
+2. Set the display filter to `ICMP`
 3. Find the private IP of the **Ubuntu VM** and ping it from Windows:
    
     ```cmd
@@ -85,7 +85,7 @@ __Step 3__: Observe SSH
 
 <img width="680" height="91" alt="image" src="https://github.com/user-attachments/assets/86e42c0f-18ea-499d-8b16-7c379a4d0e66" />
 
-1. In **Wireshark**, set filter to **SSH**
+1. In **Wireshark**, set filter to `SSH`
 2. From **Windows**, connect to **Ubuntu**:
    
     ```cmd
@@ -106,7 +106,7 @@ __Step 4__: Observe DHCP
 
 <img width="680" height="91" alt="image" src="https://github.com/user-attachments/assets/460b8a31-2b69-458e-a08f-3caa993860da" />
 
-1. In **Wireshark**, set filter to **BOOTP** (Wireshark labels DHCP as BOOTP)
+1. In **Wireshark**, set filter to `BOOTP` (Wireshark labels DHCP as BOOTP)
 2. On **Windows**:
 
     ```cmd
@@ -122,7 +122,7 @@ __Step 5__: Observe DNS
 
 <img width="680" height="91" alt="image" src="https://github.com/user-attachments/assets/686e9519-9749-4964-88f4-c149695386cf" />
 
-1. In **Wireshark**, set filter to **DNS**
+1. In **Wireshark**, set filter to `DNS`
 2. On **Windows**:
 
     ```cmd
@@ -139,8 +139,8 @@ __Step 6__: Observe RDP
 
 <img width="680" height="91" alt="image" src="https://github.com/user-attachments/assets/838e2f63-3d24-4954-9c8f-7ed94d8b1dc0" />
 
-1. In **Wireshark**, set filter to **tcp.port==3389** (Wireshark label for RDP)
-2. You’ll see a constant stream. **RDP** continuously sends screen updates/input events, so traffic persists even when idle.
+1. In **Wireshark**, set filter to `tcp.port==3389` (Wireshark label for RDP)
+2. You’ll see a constant stream in **Administrator: Windows PowerShell**. **RDP** continuously sends screen updates/input events, so traffic persists even when idle.
 
 ---
 
